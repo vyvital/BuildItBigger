@@ -20,8 +20,7 @@ import javax.inject.Named;
         )
 )
 public class MyEndpoint {
-
-    @ApiMethod(name = "Joker")
+    @ApiMethod(name = "tellJoke")
     public MyBean tellJoke(){
         MyBean response = new MyBean();
         Joke joke = new Joke();
