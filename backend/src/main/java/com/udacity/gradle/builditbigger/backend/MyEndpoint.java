@@ -4,10 +4,10 @@ import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
 
-
+import vyvital.javajokes.Joke;
 import javax.inject.Named;
 
-import vyvital.javajokes.Joke;
+
 
 /** An endpoint class we are exposing */
 @Api(
@@ -22,9 +22,11 @@ import vyvital.javajokes.Joke;
 public class MyEndpoint {
 
     @ApiMethod(name = "Joker")
-    public Joke getJoke() {
+    public MyBean tellJoke(){
+        MyBean response = new MyBean();
         Joke joke = new Joke();
-        return joke;
+        response.setData(joke.getJoke());
+        return response;
     }
 
 }
