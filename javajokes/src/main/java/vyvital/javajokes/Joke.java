@@ -4,12 +4,12 @@ public class Joke {
 
     private String joke;
 
-    public Joke (){
+    public Joke() {
         this.joke = "What's the best thing about UDP jokes?" + "\n" +
                 "I don't care if you get them";
     }
 
-    public String getJoke(){
+    public String getJoke() {
         return joke;
     }
 }
